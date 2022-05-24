@@ -7,4 +7,10 @@ contract SafeMath {
     x--;
     return x;
   }
+
+  function testUncheckedUnderflow() public pure returns (uint) {
+    uint x = 0;
+    unchecked { x--; }
+    return x;
+  }
 }
